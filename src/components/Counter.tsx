@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 export const Counter = () => {
     const [count, setCount] = useState(0);
-    const [randomCount, setRandomCount] = useState(Math.floor(Math.random() * 10));
+    const [randomCount, setRandomCount] = useState(Math.floor(Math.random() * (10 - 1) + 1));
 
     const ButtonPlus = () => {
         if(count !== randomCount){
@@ -16,7 +16,7 @@ export const Counter = () => {
 
       const ButtonReset = () => {
         setCount(0);
-        setRandomCount(Math.floor(Math.random() * 10));
+        setRandomCount(Math.floor(Math.random() * (10 - 1) + 1));
       };
 
     return (
